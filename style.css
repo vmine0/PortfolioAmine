@@ -1,0 +1,141 @@
+:root {
+    --bg: #0f111a;
+    --accent: #00d8ff;
+    --text: #f0f0f0;
+    --section-padding: 50px 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* HEADER */
+header {
+    background: #1b1d2a;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: var(--text);
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* SECTIONS */
+.section {
+    display: none;
+    padding: var(--section-padding);
+    max-width: 900px;
+    margin: auto;
+}
+
+.section.active {
+    display: block;
+}
+
+h2 {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+/* TYPEWRITER EFFECT */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid var(--accent);
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { 50% { border-color: transparent; } }
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--bg);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #00b8d8;
+    transform: scale(1.05);
+}
+
+/* CV LISTS */
+.cv-list, .skills, .experience, .projects-cv ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.cv-list li, .skills li, .experience li, .projects-cv li {
+    margin-bottom: 10px;
+}
+
+/* PROJECTS */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #1b1d2a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+form button {
+    padding: 10px;
+    background: var(--accent);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #00b8d8;
+}
+
+/* FOOTER */
+footer {
+    background: #1b1d2a;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
